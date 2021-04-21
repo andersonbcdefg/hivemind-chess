@@ -1,0 +1,57 @@
+<html>
+<head>
+<!-- STYLES -->
+<link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+<script src="./chess.js"></script>
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script src="./chance.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script defer src="main.js"></script>
+</head>
+
+<body>
+<h1 style="margin:5px">HiveMind Chess</h1>
+<p>Play chess against the collective brain of all LiChess players.</p>
+<div id="myBoard" style="width: 400px"></div>
+<button id="switch">Switch sides</button>
+<button id="undo">Undo</button>
+<p><strong>PGN: </strong><span id="pgn"></span></p>
+<p><strong>FEN: </strong><span id="fen"></span></p>
+<p>Analyze/finish this game in <a href="" target="_blank" id="lichess-link">LiChess</a>!</p>
+
+<!-- MODAL -->
+<script>
+	
+</script>
+<div class="modal" id="promotion-modal" aria-hidden="true">
+  <div class="modal-background" tabindex="-1" data-micromodal-close>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+      <header>
+        <h2 class="modal-title">
+          Promote to...
+        </h2>
+        <br/>
+        <button id="queen" aria-label="Queen" data-micromodal-close>Queen</button>
+        <button id="rook" aria-label="Rook" data-micromodal-close>Rook</button>
+        <button id="bishop" aria-label="Bishop" data-micromodal-close>Bishop</button>
+        <button id="knight" aria-label="Knight" data-micromodal-close>Queen</button>
+      </header>
+
+    </div>
+  </div>
+</div>
+
+</body>
